@@ -10,18 +10,18 @@ Before running `terraform plan`, ensure that you have the following installed an
 - **AWS CLI**: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 - **AWS Credentials**: Ensure your AWS credentials are configured. You can set this up by running `aws configure` or by creating the `~/.aws/credentials` file.
 
+## Steps
+
+Navigate to Your Terraform Configuration Directory
+- cd path/to/your/terraform/configuration
+Initialize Terraform
+- terraform init -backend-config="bucket=ihc-s3-bucket-terraform-state" -backend-config="key=dev-infra"
+Run Terraform Plan
+- terraform plan
+
 ### Example AWS credentials setup:
 ```ini
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 region = us-east-1
-
-### Steps:
-
-Navigate to Your Terraform Configuration Directory
--cd path/to/your/terraform/configuration
-Initialize Terraform
--terraform init
-Run Terraform Plan
--terraform plan
