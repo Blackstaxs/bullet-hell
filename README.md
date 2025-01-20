@@ -14,8 +14,10 @@ Before running `terraform plan`, ensure that you have the following installed an
 
 Navigate to Your Terraform Configuration Directory
 - cd path/to/your/terraform/configuration
+
 Initialize Terraform
-- terraform init -backend-config="bucket=ihc-s3-bucket-terraform-state" -backend-config="key=dev-infra"
+- terraform init-backend-config="bucket=ihc-s3-bucket-terraform-state"-backend-config="key=dev-infra"
+
 Run Terraform Plan
 - terraform plan
 
